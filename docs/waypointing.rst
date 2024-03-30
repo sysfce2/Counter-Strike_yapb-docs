@@ -155,6 +155,8 @@ If you want to install graph manually, put it in the ``*gamedir*/addons/yapb/dat
 
 Or if you want to install the old format (pwf) waypoint manually, put it in the ``*gamedir*/addons/yapb/data/pwf`` folder.
 
+Also you can install the E-BOT (ewp) waypoints in the ``*gamedir*/addons/yapb/data/ewp`` folder.
+
 Where ``*gamedir*`` is the path to the game directory, for example:
 
 - ``D:\Steam\steamapps\common\Half-Life\cstrike`` is the Counter-Strike 1.6 folder.
