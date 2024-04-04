@@ -8,7 +8,7 @@ Before you begin
 ======================
 If you have all the required packages, you can skip this section.
 
-.. Note:: You need to build 32-bit library, since Valve has dropped support for 64-bit mode HLDS.
+.. Note:: You need to build 32-bit library, since Valve has dropped support for 64-bit HLDS.
 
 Installing the Windows Packages
 -----------------------------------
