@@ -171,6 +171,7 @@ Allows to check enemy rendering before taking a victim. This is useful to enable
 
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
 
+
 yb_csdm_mode
 -------------------------------------------
 
@@ -190,6 +191,14 @@ yb_chatter_path
 Points to location where chatter (from official csbot for example) is located.
 
 Minimum value is ``-``, Maximum value is ``-``, Default value is ``sound/radio/bot``.
+
+
+yb_count_players_for_fakeping
+-------------------------------------------
+
+Take players' pings into account when calculating the average ping for bots. If not, a random ping will be chosen for bots.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
 
 
 yb_debug
@@ -296,6 +305,14 @@ If not zero, bots will use "team" economics, if more than 70% of players don't h
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
 
 
+yb_enable_fake_steamids
+-------------------------------------------
+
+Allows or disallows bots to return fake Steam ID.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
+
 yb_enable_query_hook
 -------------------------------------------
 
@@ -376,6 +393,16 @@ Specifies if analyzer should merge some near-placed nodes with much of connectio
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
 
 
+yb_graph_auto_collect_db
+-------------------------------------------
+
+Allows the bot to scan the ``graph`` folder and upload every single ``.graph`` file to the database if they are not there. This is done in a separate thread and does not block the server process.
+
+.. Note:: It works only at server startup, not at map change. Also it does not work on the currently started map.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
+
+
 yb_graph_auto_save_count
 -------------------------------------------
 
@@ -421,6 +448,22 @@ Specifies the URL to which bots will try to upload the graph file to database.
 Default value is ``yapb.jeefo.net/upload``.
 
 
+yb_grenadier_mode
+-------------------------------------------
+
+If enabled, bots will not apply throwing condition on grenades.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
+
+yb_has_team_semiclip
+-------------------------------------------
+
+When enabled, bots will not try to avoid teammates on their way. Assuming that some of the semiclip plugins are in use.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
+
 yb_ignore_cvars_on_changelevel
 -------------------------------------------
 Comma separated list of bot cvars to ignore on changelevel.
@@ -440,6 +483,14 @@ yb_ignore_enemies
 If not zero, bots will run all over the map, and doing goals but will not search for enemies.
 
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
+
+yb_ignore_enemies_after_spawn_time
+-------------------------------------------
+
+Make bots ignore enemies for a specified here time in seconds on new round. Useful for Zombie Plague mods.
+
+Minimum value is ``0``, Maximum value is ``540``, Default value is ``0``.
 
 
 yb_ignore_map_prefix_game_mode
@@ -616,6 +667,14 @@ yb_path_heuristic_type
 Selects the heuristic function mode. For debug purposes only.
 
 Minimum value is ``0``, Maximum value is ``4``, Default value is ``0``.
+
+
+yb_path_randomize_on_round_start
+-------------------------------------------
+
+Randomize pathfinding on each round start.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
 
 
 yb_pickup_ammo_and_kits
@@ -830,6 +889,18 @@ Determines the type of bots ping displayed.
 Minimum value is ``0``, Maximum value is ``2``, Default value is ``2``.
 
 
+yb_smoke_grenade_checks
+-------------------------------------------
+
+Determines the method of how smoke affects the bot's vision
+
+* If set to ``0`` the smoke won't affect the bot's vision.
+* If set to ``1`` the smoke affection method from PODBot will be used.
+* If set to ``2`` the smoke affection method from official CSBot (a.k.a. ZBot) will be used.
+
+Minimum value is ``0``, Maximum value is ``2``, Default value is ``2``.
+
+
 yb_spraypaints
 -------------------------------------------
 
@@ -904,6 +975,15 @@ yb_walking_allowed
 If not zero, bots will use "shift" or walking when hearing the nearby enemy.
 
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
+
+
+yb_whose_your_daddy
+-------------------------------------------
+
+Enables or disables extra hard difficulty for bots.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
 
 Map Specific Configuration
 ================================
