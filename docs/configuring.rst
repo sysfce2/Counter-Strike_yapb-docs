@@ -861,8 +861,8 @@ yb_shoots_thru_walls
 
 Determines the method how bots checks if wall/obstacle is penetrable.
 
-If set to ``1`` bots will try to shoot thru walls more active, even unrealistically.
-If set to ``2`` bots will use algorithm from original PODBot, and shoot thru walls less.
+If set to ``1`` bots will try to shoot through walls more actively, even unrealistically.
+If set to ``2`` bots will use algorithm from original PODBot, and shoot through walls less.
 
 The ``2`` method is consuming a bit more CPU power than the ``1`` method.
 
@@ -897,6 +897,8 @@ Determines the method of how smoke affects the bot's vision
 * If set to ``0`` the smoke won't affect the bot's vision.
 * If set to ``1`` the smoke affection method from PODBot will be used.
 * If set to ``2`` the smoke affection method from official CSBot (a.k.a. ZBot) will be used.
+
+ZBot's method allow the bot to shoot at enemies in smoke clouds under certain circumstances, while PODBot's certainly cannot.
 
 Minimum value is ``0``, Maximum value is ``2``, Default value is ``2``.
 
@@ -953,6 +955,16 @@ If not zero, bots will punish teammates that attacks the bot.
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``1``.
 
 
+yb_use_engine_pvs_check
+-------------------------------------------
+
+Use engine to check potential visibility of an enemy.
+
+It reduces the number of calls to engine functions, thus reducing CPU usage. The side effect is that bots can fire through obstacles more blatantly.
+
+Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
+
+
 yb_user_follow_percent
 -------------------------------------------
 
@@ -981,6 +993,8 @@ yb_whose_your_daddy
 -------------------------------------------
 
 Enables or disables extra hard difficulty for bots.
+
+It zeroes out any reaction or surprise timers, and allows bots to ignore FOV when searching for enemies. It also forces the bots to aim their weapon at the enemy almost immediately.
 
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
 
