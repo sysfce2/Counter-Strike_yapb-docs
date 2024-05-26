@@ -318,6 +318,8 @@ yb_enable_query_hook
 
 Enables fake server queries response, that shows bots as real players in server browser.
 
+.. Note: If you run bots on a dedicated server, make sure you have ``EnableFakeBotFeatures`` enabled in ``custom.cfg`` for this feature to work.
+
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
 
 
@@ -874,6 +876,8 @@ yb_show_avatars
 
 Enables or disables displaying bot avatars in front of their names in scoreboard. Note, that is currently you can see only avatars of your steam friends.
 
+.. Note: If you run bots on a dedicated server, make sure you have ``EnableFakeBotFeatures`` enabled in ``custom.cfg`` for this feature to work.
+
 Minimum value is ``0``, Maximum value is ``1``, Default value is ``0``.
 
 
@@ -885,6 +889,8 @@ Determines the type of bots ping displayed.
 * If set to ``0`` there will be no anything in scoreboard about bot ping.
 * If set to ``1`` there will be "BOT" displayed for every bot in scoreboard.
 * If set to ``2`` there will be "fake" ping displayed for every bot in scoreboard.
+
+.. Note: If you run bots on a dedicated server, make sure you have ``EnableFakeBotFeatures`` enabled in ``custom.cfg`` for this feature to work.
 
 Minimum value is ``0``, Maximum value is ``2``, Default value is ``2``.
 
@@ -1020,6 +1026,15 @@ By default it's ``c4.mdl`` (the models/path is omitted), so if you need to use `
 
 ``CustomCSDMSpawnPoint`` - It sets a custom spawn point classname for CSDM mods that add custom spawn points other than info_player_start and info_player_deathmatch. So bots will be able to join the game without default spawn entities.
 
+``CSDMDetectCvar`` - It sets a cvar to detect the CSDM mod if it is activated in the game.
+
+``ZMDetectCvar`` - It sets a cvar to detect the Zombie mod.
+
+``ZMDelayCvar`` - It sets a cvar that deals with time before any game mode starts.
+
+``ZMInfectedTeam`` - It determines the team on which infected players are on. Valid values: T, CT.
+
+``EnableFakeBotFeatures`` - It decides if fake features (like a fake time, fake SID (avatar), fakeping) should be enabled whitin bot code on dedicated server. By default it's off. To enable it you're should provide variable with: ``i'm confident for what i'm doing`` value. Its value doesn't affect the listen server.
 
 Bot Difficulty Configuration
 ================================
